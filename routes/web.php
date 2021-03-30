@@ -14,4 +14,5 @@ use App\Http\Controllers\BarangController;
 |
 */
 
+Route::get('barang/search', [BarangController::class, 'search'])->name('barang.search');
 Route::resource('barang', BarangController::class);

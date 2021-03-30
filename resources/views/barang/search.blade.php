@@ -5,24 +5,14 @@
             <div class="pull-left mt-2">
                 <h2 class="text-center">PWL UTS</h2>
             </div>
-            <div class="float-right">
+            <div class="float-right my-2">
                 <a class="btn btn-success" href="{{ route('barang.create') }}"> Input Barang</a>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-6">
-            <form action="{{ route('barang.search') }}" method="GET">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <input type="text" name="keywords" class="form-control" id="keywords" aria-describedby="keywords"
-                            placeholder="Masukkan nama barang">
-                    </div>
-                    <div class="col-lg-4 pl-0">
-                        <button type="submit" class="btn btn-primary">Cari</button>
-                    </div>
-                </div>
-            </form>
+    <div class="row my-3">
+        <div class="col">
+            <a href="{{ route('barang.index') }}" class="btn btn-secondary">Kembali</a>
         </div>
     </div>
     @if ($message = Session::get('success'))

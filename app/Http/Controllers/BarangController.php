@@ -25,7 +25,7 @@ class BarangController extends Controller
      */
     public function create()
     {
-        //
+        return view('barang.create');
     }
 
     /**
@@ -105,7 +105,7 @@ class BarangController extends Controller
 
     public function search(Request $request)
     {
-        $barang = barang::where('nama_barang', 'like', "%" . $request->keywords . "%")->paginate(5);
+        $barang = Barang::where('nama_barang', 'LIKE', "%" . $request->keywords . "%")->paginate(5);
         return view('barang.search', compact('barang'));
     }
 }
