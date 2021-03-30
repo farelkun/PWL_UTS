@@ -32,11 +32,11 @@
     @endif
     <table class="table table-bordered">
         <tr>
-            <th>Nim</th>
-            <th>Nama</th>
-            <th>Kelas</th>
-            <th>Jurusan</th>
-            <th>No_Handphone</th>
+            <th>Kode Barang</th>
+            <th>Nama Barang</th>
+            <th>Kategori Barang</th>
+            <th>Harga</th>
+            <th>QTY</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($barang as $val)
@@ -52,7 +52,7 @@
                         <a class="btn btn-primary" href="{{ route('barang.edit', $val->id) }}">Edit</a>
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Anda Yakin?')">Delete</button>
                     </form>
                 </td>
             </tr>
