@@ -105,7 +105,11 @@ class BarangController extends Controller
 
     public function search(Request $request)
     {
-        $barang = Barang::where('nama_barang', 'LIKE', "%" . $request->keywords . "%")->paginate(5);
+        $keyword = $request->keywords;
+        $barang = Barang::where('nama_barang', 'LIKE', "%" . $keyword . "%")
+                    ->orWhere('kategori_barang', 'LIKE', "%" . $keyword . "%")
+                    ->orWhere('kode_barang', 'LIKE', "%" . $keyword . "%")
+                    ->paginate(5);
         return view('barang.search', compact('barang'));
     }
 }
