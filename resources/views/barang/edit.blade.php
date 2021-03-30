@@ -27,24 +27,24 @@
                                 aria- describedby="kode_barang">
                         </div>
                         <div class="form-group">
-                            <label for="nama">Nama</label>
-                            <input type="text" name="nama" class="form-control" id="nama" value="{{ $Mahasiswa->nama }}"
-                                aria- describedby="nama">
+                            <label for="nama_bara">Nama Barang</label>
+                            <input type="text" name="nama_barang" class="form-control" id="nama_barang" value="{{ $barang->nama_barang }}"
+                                aria- describedby="nama_barang">
                         </div>
                         <div class="form-group">
-                            <label for="kelas">Kelas</label>
-                            <input type="kelas" name="kelas" class="form-control" id="kelas"
-                                value="{{ $Mahasiswa->kelas }}" aria- describedby="kelas">
+                            <label for="kategori_barang">Kategori Barang</label>
+                            <input type="kategori_barang" name="kategori_barang" class="form-control" id="kategori_barang"
+                                value="{{ $barang->kategori_barang }}" aria- describedby="kategori_barang">
                         </div>
                         <div class="form-group">
-                            <label for="jurusan">Jurusan</label>
-                            <input type="jurusan" name="jurusan" class="form-control" id="jurusan"
-                                value="{{ $Mahasiswa->jurusan }}" aria- describedby="jurusan">
+                            <label for="harga">Harga</label>
+                            <input type="harga" name="harga" class="form-control" id="harga"
+                                value="{{ $barang->harga }}" aria- describedby="harga">
                         </div>
                         <div class="form-group">
-                            <label for="no_handphone">No_Handphone</label>
-                            <input type="no_handphone" name="no_handphone" class="form-control" id="no_handphone"
-                                value="{{ $Mahasiswa->no_handphone }}" aria- describedby="no_handphone">
+                            <label for="qty">QTY</label>
+                            <input type="qty" name="qty" class="form-control" id="qty"
+                                value="{{ $barang->qty }}" aria- describedby="qty">
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
